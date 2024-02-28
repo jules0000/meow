@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pongal</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .parallax {
+            background-image: url('fire.gif');
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat-x;
+            height: 100vh;
+            overflow: hidden;
+            perspective: 1px;
+        }
+
+        .cloud-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+        }
+
+        .ding {
+            position: absolute;
+            background: transparent url('dingo.png') no-repeat;
+            width: 500px;
+
+            height: 500px;
+
+            animation: moveClouds 15s linear infinite;
+        }
+
+        .wew {
+            position: absolute;
+            background: transparent url('wew.png') no-repeat;
+            width: 500px;
+
+            height: 500px;
+
+            animation: moveClouds 15s linear infinite;
+        }
+
+
+        @keyframes moveClouds {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parallax">
+        <audio autoplay loop>
+            <source src="yawa.mp3" type="audio/mpeg">
+
+        </audio>
+
+        <div class="cloud-layer">
+            <div class="ding" style="top: 0%; left: 10%;"></div>
+            <div class="ding" style="top: 0%; left: 50%;"></div>
+            <div class="ding" style="top: 0%; left: 90%;"></div>
+
+            <div class="ding" style="top: 25%; left: 30%;"></div>
+            <div class="ding" style="top: 25%; left: 70%;"></div>
+
+            <div class="ding" style="top: 50%; left: 10%;"></div>
+            <div class="ding" style="top: 50%; left: 50%;"></div>
+            <div class="ding" style="top: 50%; left: 90%;"></div>
+
+            <div class="ding" style="top: 75%; left: 30%;"></div>
+            <div class="ding" style="top: 75%; left: 70%;"></div>
+        </div>
+        <div class="cloud-layer">
+            <div class="wew" style="top: 0%; left: 10%;"></div>
+            <div class="wew" style="top: 0%; left: 50%;"></div>
+            <div class="wew" style="top: 0%; left: 90%;"></div>
+
+            <div class="wew" style="top: 50%; left: 10%;"></div>
+            <div class="wew" style="top: 50%; left: 50%;"></div>
+            <div class="wew" style="top: 50%; left: 90%;"></div>
+
+            <div class="wew" style="top: 25%; left: 30%;"></div>
+            <div class="wew" style="top: 25%; left: 70%;"></div>
+
+            <div class="wew" style="top: 75%; left: 30%;"></div>
+            <div class="wew" style="top: 75%; left: 70%;"></div>
+        </div>
+    </div>
+</body>
+
+</html>
